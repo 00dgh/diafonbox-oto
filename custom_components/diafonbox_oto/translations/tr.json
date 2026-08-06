@@ -1,0 +1,37 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "DiafonBox Oto Kurulumu",
+                "description": "Multitek Cloud uygulamasına kayıtlı e-posta adresinizi girin. Phone ID otomatik bulunur — Proxyman, adb veya log okumaya gerek yok.",
+                "data": {
+                    "email": "E-posta"
+                }
+            },
+            "pick": {
+                "title": "Telefonunuzu seçin",
+                "description": "Bu hesapta birden fazla Phone ID bulundu. Home Assistant'ın hangi telefon gibi davranmasını istediğinizi seçin (✓ = doğrulanmış).\n\n{report}",
+                "data": {
+                    "phone_id": "Phone ID"
+                }
+            },
+            "manual": {
+                "title": "Phone ID'yi elle girin",
+                "description": "Otomatik tespit bir değere karar veremedi, eski manuel yol duruyor. Phone ID'yi Multitek Cloud uygulamasını proxyleyerek bulabilirsiniz (iOS'ta Proxyman, Android'de `adb logcat | grep phone_id`).\n\nKeşif kaydı:\n{report}",
+                "data": {
+                    "phone_id": "Phone ID (UUID, örn: 11111111-2222-3333-4444-555555555555)"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Bağlantı hatası",
+            "invalid_auth": "E-posta ve Phone ID ikilisi reddedildi",
+            "no_candidates": "Hiçbir Phone ID bulunamadı. Telefonunuzda Multitek Cloud uygulamasını bir kez açıp tekrar deneyin — ya da aşağıdan elle girin.",
+            "discovery_failed": "Otomatik tespit beklenmedik şekilde başarısız oldu. Ayrıntı için Home Assistant log'una bakın.",
+            "unknown": "Beklenmeyen hata oluştu"
+        },
+        "abort": {
+            "already_configured": "Bu hesap zaten yapılandırılmış"
+        }
+    }
+}

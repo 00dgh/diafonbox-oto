@@ -1,0 +1,37 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "DiafonBox Oto Setup",
+                "description": "Enter the e-mail address registered in the Multitek Cloud app. Your Phone ID is detected automatically — no Proxyman, adb or log reading needed.",
+                "data": {
+                    "email": "E-mail"
+                }
+            },
+            "pick": {
+                "title": "Select your phone",
+                "description": "More than one Phone ID was found on this account. Pick the phone you want Home Assistant to act as (✓ = verified).\n\n{report}",
+                "data": {
+                    "phone_id": "Phone ID"
+                }
+            },
+            "manual": {
+                "title": "Enter Phone ID manually",
+                "description": "Automatic detection did not settle on a value, so the old manual route is still here. Find the Phone ID by proxying the Multitek Cloud app (Proxyman on iOS, `adb logcat | grep phone_id` on Android).\n\nDiscovery log:\n{report}",
+                "data": {
+                    "phone_id": "Phone ID (UUID, e.g. 11111111-2222-3333-4444-555555555555)"
+                }
+            }
+        },
+        "error": {
+            "cannot_connect": "Connection error",
+            "invalid_auth": "The e-mail and Phone ID combination was rejected",
+            "no_candidates": "No Phone ID could be discovered. Open the Multitek Cloud app on your phone once, then try again — or enter it manually below.",
+            "discovery_failed": "Automatic detection failed unexpectedly. See the Home Assistant log for details.",
+            "unknown": "Unexpected error occurred"
+        },
+        "abort": {
+            "already_configured": "This account is already configured"
+        }
+    }
+}

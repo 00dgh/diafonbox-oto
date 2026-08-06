@@ -1,0 +1,11 @@
+open_door:
+  name: Open Door
+  description: Opens the door by sending API commands to Multitek DiafonBox
+  fields:
+    location_id:
+      name: Location ID
+      description: The location ID to open the door for (optional, uses first location if not specified)
+      required: false
+      example: "VZG20250517204814978sem"
+      selector:
+        text:

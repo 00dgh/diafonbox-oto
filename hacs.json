@@ -1,0 +1,8 @@
+{
+    "name": "DiafonBox Oto",
+    "country": [
+        "TR"
+    ],
+    "render_readme": true,
+    "homeassistant": "2023.1.0"
+}
